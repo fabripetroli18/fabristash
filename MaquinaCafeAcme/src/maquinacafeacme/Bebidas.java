@@ -1,17 +1,28 @@
 
 package maquinacafeacme;
 
+import maquinacafeacme.Cafe;
+import maquinacafeacme.Te;
+import maquinacafeacme.Expresso;
+import maquinacafeacme.Ristretto;
+import maquinacafeacme.Normal;
+import maquinacafeacme.Negro;
+import maquinacafeacme.Verde;
+import maquinacafeacme.Rojo;
+
 
 public abstract class Bebidas {
     
     private String tipo;
     
-    private int cantidadAzucar;
-    private int cantidadLeche;
+    private int cantidadAzucar=0;
+    private int cantidadLeche=0;
     
     private double precio;
     
     private String descripcion;
+    
+    private double total=0.0;
     
     
     
@@ -63,6 +74,7 @@ public abstract class Bebidas {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+    
     
     
 }

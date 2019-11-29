@@ -14,6 +14,7 @@ public class MaquinaCafeAcme {
         
         boolean otroPedido = true;
         
+        System.out.println("Ingrese 1 para Cafe y 2 para Té, si quiere terminar la operación presione cualquier tecla");
         int orden = scanner.nextInt();
         
         if(orden == 1){
@@ -48,6 +49,7 @@ public class MaquinaCafeAcme {
                     break;
             }    
         }
-    
+        else 
+        
     }
 }
