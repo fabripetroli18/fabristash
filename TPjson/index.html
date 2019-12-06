@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Heroes de shooters</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+    const header = document.querySelector('header');
+    const section = document.querySelector('section');
+    let requestURL = 'package.json';
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+      const package = request.response;
+      populateHeader(package);
+      showSuperheroes(package);
+    }
+    function populateHeader(jsonObj) {
+      const myH1 = document.createElement('h1');
+      myH1.textContent = jsonObj['nombredelgrupo'];
+      header.appendChild(myH1);
+      const myPara = document.createElement('p');
+      myPara.textContent = 'Defensores de: ' + jsonObj['ciudad'];
+      header.appendChild(myPara);
+    }
+    function showPackage(jsonObj) {
+      const package = jsonObj['miembros'];
+      for(let i = 0; i < package.length; i++) {
+        const myArticle = document.createElement('article');
+        const myH2 = document.createElement('h2');
+        const myPara1 = document.createElement('p');
+        const myPara2 = document.createElement('p');
+        const myPara3 = document.createElement('p');
+        const myPara4 = document.createElement('p');
+        const myPara5 = document.createElement('p');
+        const myList = document.createElement('ul');
+        const myFoto = document.createElement('img');;
+
+        myFoto.src = 'img/' + package[i].foto;
+        myFoto.height = "100"
+        myH2.textContent = package[i].nombre;
+        myPara1.textContent = 'Edad: ' + package[i].edad;
+        myPara2.textContent = 'Saga: ' + package[i].saga;
+        myPara3.textContent = 'Alineación: ' + package[i].alineacion;
+        myPara4.textContent = 'Enemigos: ' + package[i].enemigos;
+        myPara5.textContent = 'Caracteristicas:' + package[i].caracteristicas;
+        const superCaractericas = package[i].caracteristicas;
+        for(let j = 0; j < superCaracteristicas.length; j++) {
+          const listItem = document.createElement('li');
+          listItem.textContent = superCaracteristicas[j];
+          myList.appendChild(listItem);
+        }
+        myArticle.appendChild(myFoto);
+        myArticle.appendChild(myH2);
+        myArticle.appendChild(myPara1);
+        myArticle.appendChild(myPara2);
+        myArticle.appendChild(myPara3);
+        myArticle.appendChild(myPara4);
+        myArticle.appendChild(myPara5);
+        myArticle.appendChild(myList);
+        section.appendChild(myArticle);
+      }
+    }
+    </script>
+  </body>
+</html>
+

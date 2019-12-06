@@ -1,0 +1,45 @@
+{
+  "nombredelgrupo" : "Heroes de videojuegos",
+  "ciudad" : "La Tierra",
+  "active" : true,
+  "miembros" : [
+    {
+      "foto": "masterchief.jpg",
+      "nombre" : "Master Chief, John-117",
+      "edad" : 48,
+      "saga" : "Halo",
+      "alineacion" : "UNSC (Mando Espacial De Las Naciones Unidas)",
+      "enemigos" : "El Pacto, Los Flood, Forerunners",
+      "caracteristicas" : [
+        "Fuerza sobrehumana",
+        "Agilidad mental"
+      ]
+    },
+    {
+      "foto": "gordonfreeman.jpg",
+      "nombre" : "Gordon Freeman",
+      "edad" : 27,
+      "saga" : "Half-Life",
+      "alineacion" : "Black Mesa (ex), Resistencia (actual)",
+      "enemigos" : "La Alianza",
+      "caracteristicas" : [
+        "Traje HEV Mark IV",
+        "Módulo de salto largo",
+        "Graduado de MIT"
+      ]
+    },
+    {
+      "foto": "doomslayer.png",
+      "nombre" : "Doom Slayer",
+      "edad" : "???",
+      "saga" : "DOOM",
+      "alineacion" : "UAC (neutral), Dios",
+      "enemigos" : "Infierno",
+      "caracteristicas" : [
+        "Maestria armamentistica",
+        "Potenciación de destrucción",
+        "Absorción de Energía"
+      ]
+    }
+  ]
+}
