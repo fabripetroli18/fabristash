@@ -1,0 +1,82 @@
+@font-face {
+  font-family: halflife;
+  src: url('HalfLife.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: halo;
+  src: url('Halo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: doom;
+  src: url('Doom.ttf') format('truetype');
+}
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+body {
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/* header styles */
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* section styles */
+
+section {
+  margin: 0 auto;
+}
+section article {
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+}
+
+article img{
+  max-width: 95%; 
+}
+section p {
+  margin: 10px 0;
+  font-size: 1.7rem;
+}
+
+section ul {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+}
+
+.halflife {
+    font-family: halflife;
+    color: orange;
+}
+
+.halo {
+    font-family: halo;
+    color: blue;
+}
+
+.doom {
+    font-family: doom;
+    color: green;
+}
